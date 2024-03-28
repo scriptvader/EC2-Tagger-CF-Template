@@ -14,17 +14,25 @@ The number and order of the keys and values should be the same.
 
 For example the following set ok keys and values...
 
-#### Keys: ID, Region, Fruit
-
-#### Values: 117, London, Apple
+* Keys: ID, Region, Fruit
+* Values: 117, London, Apple
 
 ...will create the tags
 
-#### ID: 117
+* ID: 117
+* Region: London
+* Fruit: Apple
 
-#### Region: London
+The code will fail if the size of both lists do not match.
 
-#### Fruit: Apple
+## AWS Resource Costs
+
+As with most AWS services you will incur costs for usage. For this CloudFormation template the resources that incur costs are as follows
+
+* Pricing:
+  * <a href="https://aws.amazon.com/lambda/pricing/">Lambda pricing</a>
+  * <a href="https://aws.amazon.com/eventbridge/pricing/">KMS pricing</a>
+
 
 
 
