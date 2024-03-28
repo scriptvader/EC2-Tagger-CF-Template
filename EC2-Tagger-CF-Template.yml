@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Automatically add tags to newly spun EC2 instances
+Description: Automatically add tags to all newly created EC2 instances.
 Parameters:
   DeploymentName:
     Type: String
