@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Automatically add tags to all newly created EC2 instances.
 Parameters:
-  DeploymentName:
+  StackName:
     Type: String
     Description: This name would apply to resources in this template.
   Keys:
@@ -19,7 +19,7 @@ Resources:
     Properties:
       RoleName: !Join
       - ''
-      - - !Ref DeploymentName
+      - - !Ref StackName
         - '-role-'
         - !Ref 'AWS::Region'
       AssumeRolePolicyDocument:
@@ -34,7 +34,7 @@ Resources:
       Policies:
       - PolicyName: !Join
         - ''
-        - - !Ref DeploymentName
+        - - !Ref StackName
           - '-policy-'
           - !Ref 'AWS::Region'
         PolicyDocument:
@@ -76,7 +76,7 @@ Resources:
               - ':'
               - !Ref 'AWS::AccountId'
               - ':log-group:/aws/lambda/'
-              - !Ref DeploymentName
+              - !Ref StackName
               - '-function:*'
   LambdaFunction:
     Type: 'AWS::Lambda::Function'
@@ -133,7 +133,7 @@ Resources:
                 print(f"Operation failed. Error: {str(e)}\n")
       FunctionName: !Join
       - ''
-      - - !Ref DeploymentName
+      - - !Ref StackName
         - '-function'
       Description: Lambda function that tags all newly created instances
       Handler: index.lambda_handler
@@ -148,7 +148,7 @@ Resources:
         EventBridge rule that triggers the function. This rule detects EC2 instance launch
       Name: !Join
       - ''
-      - - !Ref DeploymentName
+      - - !Ref StackName
         - '-event'
       EventPattern:
         source:
