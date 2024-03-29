@@ -177,19 +177,19 @@ Resources:
       SourceArn: !GetAtt
       - EventBridgeRule
       - Arn
-  Outputs:
-    LambdaFunctionArn:
-      Description: The ARN of the Lambda function
-      Value: !GetAtt
-      - LambdaFunction
-      - Arn
-    IamRoleArn:
-      Description: The ARN of the IAM Role
-      Value: !GetAtt
-      - IamRole
-      - Arn
-    EventBridgeRuleArn:
-      Description: The ARN of the EventBridge Rule
-      Value: !GetAtt
-      - EventBridgeRule
-      - Arn
+Outputs:
+  LambdaFunctionArn:
+    Description: The ARN of the Lambda function
+    Value: !GetAtt
+    - LambdaFunction
+    - Arn
+  IamRoleArn:
+    Description: The ARN of the IAM Role
+    Value: !GetAtt
+    - IamRole
+    - Arn
+  EventBridgeRuleArn:
+    Description: The ARN of the EventBridge Rule
+    Value: !GetAtt
+    - EventBridgeRule
+    - Arn
