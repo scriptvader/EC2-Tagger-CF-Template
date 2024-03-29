@@ -166,7 +166,7 @@ Resources:
         - LambdaFunction
         - Arn
         Id: MyLambdaFunctionTrigger
-  LambdaPermissionvmgt:
+  LambdaPermission:
     Type: 'AWS::Lambda::Permission'
     Properties:
       Action: 'lambda:InvokeFunction'
