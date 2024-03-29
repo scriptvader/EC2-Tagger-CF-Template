@@ -33,6 +33,13 @@ As with most AWS services you will incur costs for usage. For this CloudFormatio
   * <a href="https://aws.amazon.com/lambda/pricing/">Lambda pricing</a>
   * <a href="https://aws.amazon.com/eventbridge/pricing/">EventBridge pricing</a>
 
+## Template Output
+
+In the CloudFormation Console you should be able to verify the following resources have been created:
+* A Lambda Function
+* An EventBridge Rule
+* Lamabda Permission
+* An IAM role
 
 
 
