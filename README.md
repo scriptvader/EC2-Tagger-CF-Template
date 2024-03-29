@@ -31,7 +31,7 @@ As with most AWS services you will incur costs for usage. For this CloudFormatio
 
 * Pricing:
   * <a href="https://aws.amazon.com/lambda/pricing/">Lambda pricing</a>
-  * <a href="https://aws.amazon.com/eventbridge/pricing/">KMS pricing</a>
+  * <a href="https://aws.amazon.com/eventbridge/pricing/">EventBridge pricing</a>
 
 
 
